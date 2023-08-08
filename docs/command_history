@@ -1,0 +1,8 @@
+# Command History
+
+```shell
+touch main.go
+go mod init playground-go
+go get -u github.com/gin-gonic/gin
+go run main.go
+```
