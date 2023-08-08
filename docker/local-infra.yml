@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres
+    container_name: playground-go-infra-pg
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../db/local/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - TZ=UTC
