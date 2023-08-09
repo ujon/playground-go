@@ -8,6 +8,7 @@ services:
       - "5432:5432"
     volumes:
       - ../db/local/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../db/schema/go/test.sql:/docker-entrypoint-initdb.d/test.sql
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=secret
